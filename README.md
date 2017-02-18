@@ -9,13 +9,13 @@
 [![npm badge][npm-badge-png]][package-url]
 [![react dates badge][react-dates-png]][react-dates-url]
 
-> An easily internationalizable, mobile-friendly datepicker library for the web. (with jalaali calendar support)
+> An easily internationalizable, mobile-friendly datepicker library based on Jalaali Calendar for the web.
 >
 
  - default language is "Farsi", to change it add `inFarsi={false}`
-   attribute to the component
+   attribute to the component.
  - default calendar is "Jalaali", to change it to gregorian add
-   `monthFormat="YYYY MMMM"` to the component
+   `monthFormat="YYYY MMMM"` to the component.
 
 Credits and Thanks goes to:
 
