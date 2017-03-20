@@ -144,12 +144,12 @@ export default class DateRangePickerInput extends React.Component {
         })}
       >
         {(showDefaultInputIcon || customInputIcon !== null) &&
-          <span
-            className="DateRangePickerInput__calendar-icon"
-            onClick={onStartDateFocus}
-          >
-            {inputIcon}
-          </span>
+        <span
+          className="DateRangePickerInput__calendar-icon"
+          onClick={onStartDateFocus}
+        >
+          {inputIcon}
+        </span>
         }
         <DateInput
           id={startDateId}
@@ -188,21 +188,21 @@ export default class DateRangePickerInput extends React.Component {
         />
 
         {showClearDates &&
-          <button
-            type="button"
-            className={cx('DateRangePickerInput__clear-dates', {
-              'DateRangePickerInput__clear-dates--hide': !(startDate || endDate),
-              'DateRangePickerInput__clear-dates--hover': isClearDatesHovered,
-            })}
-            onMouseEnter={this.onClearDatesMouseEnter}
-            onMouseLeave={this.onClearDatesMouseLeave}
-            onClick={onClearDates}
-          >
-            <span className="screen-reader-only">
-              {phrases.clearDates}
-            </span>
-            <CloseButton />
-          </button>
+        <button
+          type="button"
+          className={cx('DateRangePickerInput__clear-dates', {
+            'DateRangePickerInput__clear-dates--hide': !(startDate || endDate),
+            'DateRangePickerInput__clear-dates--hover': isClearDatesHovered,
+          })}
+          onMouseEnter={this.onClearDatesMouseEnter}
+          onMouseLeave={this.onClearDatesMouseLeave}
+          onClick={onClearDates}
+        >
+          <span className="screen-reader-only">
+            {phrases.clearDates}
+          </span>
+          <CloseButton />
+        </button>
         }
       </div>
     );

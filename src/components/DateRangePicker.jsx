@@ -259,16 +259,16 @@ export default class DateRangePicker extends React.Component {
         />
 
         {withFullScreenPortal &&
-          <button
-            className="DateRangePicker__close"
-            type="button"
-            onClick={this.onOutsideClick}
-          >
-            <span className="screen-reader-only">
-              {this.props.phrases.closeDatePicker}
-            </span>
-            <CloseButton />
-          </button>
+        <button
+          className="DateRangePicker__close"
+          type="button"
+          onClick={this.onOutsideClick}
+        >
+          <span className="screen-reader-only">
+            {this.props.phrases.closeDatePicker}
+          </span>
+          <CloseButton />
+        </button>
         }
       </div>
     );

@@ -337,16 +337,16 @@ export default class SingleDatePicker extends React.Component {
         />
 
         {withFullScreenPortal &&
-          <button
-            className="SingleDatePicker__close"
-            type="button"
-            onClick={this.onClearFocus}
-          >
-            <span className="screen-reader-only">
-              {this.props.phrases.closeDatePicker}
-            </span>
-            <CloseButton />
-          </button>
+        <button
+          className="SingleDatePicker__close"
+          type="button"
+          onClick={this.onClearFocus}
+        >
+          <span className="screen-reader-only">
+            {this.props.phrases.closeDatePicker}
+          </span>
+          <CloseButton />
+        </button>
         }
       </div>
     );

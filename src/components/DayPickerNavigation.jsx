@@ -69,12 +69,12 @@ export default function DayPickerNavigation(props) {
   return (
     <div className={navClassNames}>
       {!isVerticalScrollable &&
-        <span
-          className={prevClassNames}
-          onClick={onPrevMonthClick}
-        >
-          {navPrevIcon}
-        </span>
+      <span
+        className={prevClassNames}
+        onClick={onPrevMonthClick}
+      >
+        {navPrevIcon}
+      </span>
       }
 
       <span

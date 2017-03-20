@@ -116,21 +116,21 @@ export default class SingleDatePickerInput extends React.Component {
         />
 
         {showClearDate &&
-          <button
-            type="button"
-            className={cx('SingleDatePickerInput__clear-date', {
-              'SingleDatePickerInput__clear-date--hide': !displayValue,
-              'SingleDatePickerInput__clear-date--hover': isClearDateHovered,
-            })}
-            onMouseEnter={this.onClearDateMouseEnter}
-            onMouseLeave={this.onClearDateMouseLeave}
-            onClick={onClearDate}
-          >
-            <span className="screen-reader-only">
-              {phrases.clearDate}
-            </span>
-            <CloseButton />
-          </button>
+        <button
+          type="button"
+          className={cx('SingleDatePickerInput__clear-date', {
+            'SingleDatePickerInput__clear-date--hide': !displayValue,
+            'SingleDatePickerInput__clear-date--hover': isClearDateHovered,
+          })}
+          onMouseEnter={this.onClearDateMouseEnter}
+          onMouseLeave={this.onClearDateMouseLeave}
+          onClick={onClearDate}
+        >
+          <span className="screen-reader-only">
+            {phrases.clearDate}
+          </span>
+          <CloseButton />
+        </button>
         }
       </div>
     );
