@@ -18,7 +18,7 @@ script:
   - 'if [ -n "${KARMA-}" ]; then npm run tests-karma ; fi'
 after_success:
   - 'if [ "${TRAVIS_NODE_VERSION}" = "4.2" ]; then npm run cover; cat ./coverage/lcov.info | ./node_modules/.bin/coveralls ; fi'
-  - npm run semantic-release
+  - 'npm run semantic-release'
 env:
   global:
     - REACT=0.14
