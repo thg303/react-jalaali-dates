@@ -27,9 +27,9 @@ after_success:
   - 'if [ "${TRAVIS_NODE_VERSION}" = "4.2" ]; then npm run cover; cat ./coverage/lcov.info | ./node_modules/.bin/coveralls ; fi'
   - 'npm run semantic-release'
 env:
-  - CXX=g++-4.8
   global:
     - REACT=0.14
+    - CXX=g++-4.8
   matrix:
     - TEST=true
 sudo: false
