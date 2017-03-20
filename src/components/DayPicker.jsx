@@ -314,6 +314,7 @@ export default class DayPicker extends React.Component {
       navPrev,
       navNext,
       orientation,
+      inFarsi,
     } = this.props;
 
     let onNextMonthClick;
@@ -325,8 +326,8 @@ export default class DayPicker extends React.Component {
 
     return (
       <DayPickerNavigation
-        onPrevMonthClick={this.onPrevMonthClick}
-        onNextMonthClick={onNextMonthClick}
+        onPrevMonthClick={inFarsi ? onNextMonthClick : this.onPrevMonthClick}
+        onNextMonthClick={inFarsi ? this.onPrevMonthClick : onNextMonthClick}
         navPrev={navPrev}
         navNext={navNext}
         orientation={orientation}j
@@ -382,6 +383,7 @@ export default class DayPicker extends React.Component {
       renderDay,
       onOutsideClick,
       monthFormat,
+      inFarsi,
     } = this.props;
 
     const numOfWeekHeaders = this.isVertical() ? 1 : numberOfMonths;
@@ -432,7 +434,8 @@ export default class DayPicker extends React.Component {
 
     const isCalendarMonthGridAnimating = monthTransition !== null;
     const transformType = this.isVertical() ? 'translateY' : 'translateX';
-    const transformValue = `${transformType}(${translationValue}px)`;
+    const finalTranslation = this.props.inFarsi ? translationValue * -1 : translationValue;
+    const transformValue = `${transformType}(${finalTranslation}px)`;
 
     return (
       <div className={dayPickerClassNames} style={dayPickerStyle} >
@@ -465,6 +468,7 @@ export default class DayPicker extends React.Component {
               renderDay={renderDay}
               onMonthTransitionEnd={this.updateStateAfterMonthTransition}
               monthFormat={monthFormat}
+              inFarsi={inFarsi}
             />
             {verticalScrollable && this.renderNavigation()}
           </div>

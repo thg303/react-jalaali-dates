@@ -35,6 +35,7 @@ const propTypes = {
 
   // i18n
   monthFormat: PropTypes.string,
+  inFarsi: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -54,6 +55,7 @@ const defaultProps = {
 
   // i18n
   monthFormat: 'MMMM YYYY', // english locale
+  inFarsi: true,
 };
 
 function getMonths(initialMonth, numberOfMonths) {
@@ -151,6 +153,7 @@ export default class CalendarMonthGrid extends React.Component {
       onDayClick,
       renderDay,
       onMonthTransitionEnd,
+      inFarsi,
     } = this.props;
 
 
@@ -167,7 +170,7 @@ export default class CalendarMonthGrid extends React.Component {
       <div
         ref={(ref) => { this.container = ref; }}
         className={className}
-        style={getTransformStyles(transformValue)}
+        style={{ ...getTransformStyles(transformValue), direction: inFarsi ? 'rtl' : 'ltr' }}
         onTransitionEnd={onMonthTransitionEnd}
       >
         {months.map((month, i) => {

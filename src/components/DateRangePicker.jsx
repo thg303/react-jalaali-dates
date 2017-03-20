@@ -215,6 +215,7 @@ export default class DateRangePicker extends React.Component {
       keepOpenOnDateSelect,
       renderDay,
       initialVisibleMonth,
+      inFarsi,
     } = this.props;
     const { dayPickerContainerStyles } = this.state;
 
@@ -254,6 +255,7 @@ export default class DateRangePicker extends React.Component {
           isDayBlocked={isDayBlocked}
           keepOpenOnDateSelect={keepOpenOnDateSelect}
           renderDay={renderDay}
+          inFarsi={inFarsi}
         />
 
         {withFullScreenPortal &&
@@ -298,6 +300,7 @@ export default class DateRangePicker extends React.Component {
       onDatesChange,
       onFocusChange,
       renderDay,
+      inFarsi,
     } = this.props;
 
     const onOutsideClick = (!withPortal && !withFullScreenPortal) ? this.onOutsideClick : undefined;
@@ -331,6 +334,7 @@ export default class DateRangePicker extends React.Component {
             renderDay={renderDay}
             phrases={phrases}
             screenReaderMessage={screenReaderInputMessage}
+            inFarsi={inFarsi}
           />
 
           {this.maybeRenderDayPickerWithPortal()}

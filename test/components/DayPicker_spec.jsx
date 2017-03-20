@@ -123,7 +123,7 @@ describe('DayPicker', () => {
 
   describe('props.orientation === VERTICAL_SCROLLABLE', () => {
     it('uses multiplyScrollableMonths instead of onNextMonthClick', () => {
-      const wrapper = shallow(<DayPicker orientation={VERTICAL_SCROLLABLE} />);
+      const wrapper = shallow(<DayPicker inFarsi={false} orientation={VERTICAL_SCROLLABLE} />);
       const nav = wrapper.find(DayPickerNavigation);
       expect(nav.prop('onNextMonthClick')).to.equal(wrapper.instance().multiplyScrollableMonths);
     });
@@ -188,7 +188,7 @@ describe('DayPicker', () => {
 
   describe('#multiplyScrollableMonths', () => {
     it('increments scrollableMonthMultiple', () => {
-      const wrapper = shallow(<DayPicker />);
+      const wrapper = shallow(<DayPicker inFarsi={false} />);
       wrapper.instance().multiplyScrollableMonths();
       expect(wrapper.state().scrollableMonthMultiple).to.equal(2);
     });

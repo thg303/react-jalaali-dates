@@ -288,6 +288,7 @@ describe('DayPickerRangeController', () => {
                 focusedInput={END_DATE}
                 startDate={startDate}
                 minimumNights={MIN_NIGHTS}
+                inFarsi={false}
               />,
             );
             expect(wrapper.instance().doesNotMeetMinimumNights(testDate)).to.equal(true);

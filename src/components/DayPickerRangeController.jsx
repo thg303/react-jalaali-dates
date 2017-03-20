@@ -50,6 +50,7 @@ const propTypes = {
 
   // i18n
   monthFormat: PropTypes.string,
+  inFarsi: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -85,6 +86,7 @@ const defaultProps = {
 
   // i18n
   monthFormat: 'MMMM YYYY',
+  inFarsi: true,
 };
 
 export default class DayPickerRangeController extends React.Component {
@@ -238,6 +240,7 @@ export default class DayPickerRangeController extends React.Component {
       initialVisibleMonth,
       focusedInput,
       renderDay,
+      inFarsi,
     } = this.props;
 
     const modifiers = {
@@ -282,6 +285,7 @@ export default class DayPickerRangeController extends React.Component {
         navPrev={navPrev}
         navNext={navNext}
         renderDay={renderDay}
+        inFarsi={inFarsi}
       />
     );
   }
