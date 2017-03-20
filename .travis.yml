@@ -4,6 +4,9 @@ cache:
     - node_modules
 notifications:
   email: false
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libgnome-keyring-dev
 node_js:
   - 'iojs'
   - '7'
